@@ -30,36 +30,36 @@ function playRound(playerSelection, computerSelection) {
     console.log(computerSelection);
     playerSelection = getPlayerSelection();
     if (playerSelection == "rock" && computerSelection == "scissors") {
-        playerPoints += 1;
+        playerPoints++;
         return "You win! Rock beats scissors.";
     }
     else if (playerSelection == "rock" && computerSelection == "paper") {
-        computerPoints += 1;
+        computerPoints++;
         return "You lose. Paper beats rock."
     }
     else if (playerSelection == "rock" && computerSelection == "rock") {
         return "Tie."
     }
     else if (playerSelection == "paper" && computerSelection == "scissors") {
-        computerPoints += 1;
+        computerPoints++;
         return "You lose. Scissors beats paper."
     }
     else if (playerSelection == "paper" && computerSelection == "paper") {
         return "Tie."
     }
     else if (playerSelection == "paper" && computerSelection == "rock") {
-        playerPoints += 1;
+        playerPoints++;
         return "You win! Paper beats rock."
     }
     else if (playerSelection == "scissors" && computerSelection == "paper") {
-        playerPoints += 1;
+        playerPoints++;
         return "You win! Scissors beats paper."
     }
     else if (playerSelection == "scissors" && computerSelection == "scissors") {
         return "Tie."
     }
     else if (playerSelection == "scissors" && computerSelection == "rock") {
-        computerPoints += 1;
+        computerPoints++;
         return "You lose. Rock beats scissors."
     }
 
@@ -71,8 +71,17 @@ let computerPoints = 0;
 //function game(), call playRound inside to play 5 rounds and keep score, report winner
 function game(){
     for (let i = 0; i < 5; i++) {
-        playRound(playerSelection, computerSelection);
+        console.log(playRound(playerSelection, computerSelection));
         console.log("Player: ", playerPoints, "Computer: ", computerPoints);
+    }
+    if (playerPoints > computerPoints) {
+        console.log("You win!");
+    }
+    else if (playerPoints < computerPoints) {
+        console.log("You Loser.");
+    }
+    else {
+        console.log("Tie.");
     }
 }
 
