@@ -10,10 +10,17 @@
 
 <body>
     <h1>Rock-Paper-Scissors</h1>
-    <button class="rock">Rock</button>
-    <button class="paper">Paper</button>
-    <button class="scissors">Scissors</button>
+    <button class="playGame">Play Game</button>
+    <div id="rps">
+        <button style="display: none;" class="rock">Rock</button>
+        <button style="display: none;" class="paper">Paper</button>
+        <button style="display: none;" class="scissors">Scissors</button>
+    </div>
     <h2 id="roundWinner"></h2>
+    <div>
+        <h3 id="player">Player Points: <span id="playerPoints"></span> </h3>
+        <h3 id="computer">Computer Points: <span id="computerPoints"></span> </h3>
+    </div>
 
     <script src="script.js"></script>
 </body>
